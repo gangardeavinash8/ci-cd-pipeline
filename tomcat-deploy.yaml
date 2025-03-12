@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: myapp1
-  namespace: tg
+  namespace: mytg
 spec:
   replicas: 5
   selector:
@@ -14,10 +14,10 @@ spec:
        app: tomcat
     spec:
      imagePullSecrets:
-       - name: passwd-for-custom-di
+       - name: mypasswd
      containers:
        - name: tomcat
-         image:  cdtsbikaner/project1:BUILD_NUMBER
+         image:  ganagrdeavinash/practice:BUILD_NUMBER
          ports:
           - containerPort: 8080
       
