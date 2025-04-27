@@ -7,17 +7,16 @@ spec:
   replicas: 5
   selector:
     matchLabels:
-     app: tomcat
+      app: tomcat
   template:
     metadata:
-     labels:
-       app: tomcat
+      labels:
+        app: tomcat
     spec:
-     imagePullSecrets: mypasswd-for-custom-img
-       - name: 
-     containers:
-       - name: tomcat
-         image: "avinashgangarde9112/ci-cd-pipeline:BUILD_NUMBER"
-         ports:
-          - containerPort: 8080
-      
+      imagePullSecrets:
+        - name: mypasswd-for-custom-img
+      containers:
+        - name: tomcat
+          image: "avinashgangarde9112/ci-cd-pipeline:BUILD_NUMBER"
+          ports:
+            - containerPort: 8080
