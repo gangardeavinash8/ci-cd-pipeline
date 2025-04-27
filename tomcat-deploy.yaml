@@ -13,8 +13,8 @@ spec:
      labels:
        app: tomcat
     spec:
-     imagePullSecrets:
-       - name: mypasswd
+     imagePullSecrets: mypasswd-for-custom-img
+       - name: 
      containers:
        - name: tomcat
          image:  avinashgangarde9112/ci-cd-pipeline:BUILD_NUMBER
