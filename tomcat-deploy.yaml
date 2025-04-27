@@ -17,7 +17,7 @@ spec:
        - name: mypasswd
      containers:
        - name: tomcat
-         image:  ganagrdeavinash/practice:BUILD_NUMBER
+         image:  avinashgangarde9112/ci-cd-pipeline:BUILD_NUMBER
          ports:
           - containerPort: 8080
       
